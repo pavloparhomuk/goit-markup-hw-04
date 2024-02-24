@@ -20,6 +20,7 @@ ul,ol {
 header {
     font-style: normal;
     background: #fff;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 img {
     display: block;
@@ -83,7 +84,21 @@ address {
 .header-nav-link:focus {
     color: #404bbf;
 }
-
+.underliner-studio {
+    position: relative;
+    color: #404bbf;
+}
+.underliner-studio::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: absolute;
+    background-color: #404bbf;
+}
 
 .address {
     font-style: normal;
@@ -111,6 +126,12 @@ address {
 }
 .hero {
 background-color: #2e2f42;
+background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), 
+url("/images/people-office\ 1\ \(1\).jpg");
+background-size: cover;
+max-width: 1440px;
+margin-left: auto;
+margin-right: auto;
 padding: 120px;
 }
 .hero-container {
@@ -155,6 +176,7 @@ margin: 0 auto;
             padding: 16px 32px;
                 align-items: flex-start;
                 gap: 10px;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .order-service-btn:hover,
 .order-service-btn:focus {
@@ -232,11 +254,13 @@ color: #fff;
 }
 .team-list {
  display: flex;
+flex-wrap: wrap;
  gap: 24px;   
 }
 .team-list-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
-        
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+                0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
         background-color: #FFFFFF;
         border-radius: 0px 0px 4px 4px;
 }
@@ -284,7 +308,35 @@ gap: 24px;
 row-gap: 48px;
 }
 .portfolio-list-item {
-  width: calc((100% - 48) / 3);  
+  width: calc((100% - 48) / 3);
+
+}
+.portfolio-list-item:hover,
+.portfolio-list-item:focus,
+.portfolio-list-item:active {
+box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.portfolio-overlay {
+ position: relative;
+ overflow: hidden;
+ width: 360px;
+ height: 300px;   
+}
+.portfolio-overlay-text {
+ position: absolute;
+ top: 0;
+ left: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+padding: 40px 32px;
+ background-color: #4d5ae5;
+ color: #f4f4fd;   
+}
+.portfolio-list-item:hover .portfolio-overlay-text {
+ transform: translateY(0%);   
 }
 .portfolio-content {
     padding: 32px 16px;
