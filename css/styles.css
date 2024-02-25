@@ -116,6 +116,7 @@ font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
@@ -128,8 +129,8 @@ font-weight: 500;
 }
 .hero {
 background-color: #2e2f42;
-background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-url("/images/people-office\ 1\ \(1\).jpg");
+background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office\ 1\ \(1\).jpg);
 background-size: cover;
 max-width: 1440px;
 margin-left: auto;
@@ -181,7 +182,7 @@ margin: 0 auto;
     align-items: flex-start;
     gap: 10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-service-btn:hover,
 .order-service-btn:focus {
@@ -316,7 +317,8 @@ width: 100%;
 
 }
 .social-link:hover,
-.social-link:focus {
+.social-link:focus,
+.social-link:active {
 background-color: #404bbf;
 }
 .social-link-icon {
@@ -467,8 +469,9 @@ height: 100%;
 }
 
 .footer-social-link:hover,
-.footer-social-link:focus {
-background-color: #31d0aa;
+.footer-social-link:focus,
+.footer-social-link:active {
+background-color: #31d0aa
 }
 .social-media-icon {
     fill: #f4f4fd;
